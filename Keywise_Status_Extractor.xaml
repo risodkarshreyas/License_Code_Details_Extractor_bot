@@ -1,0 +1,277 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Keywise_Status_Extractor" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="783.3333333333334,605.3333333333334" sap2010:WorkflowViewState.IdRef="Keywise_Status_Extractor_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="41">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="43">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Keywise_Status_Extractor" sap:VirtualizedContainerService.HintSize="592,540.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_temp_status" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[dt_temp_status]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="530,68.66666666666667" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;URL&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;LicenseCode&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="530,310" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,214" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,716.6666666666666" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="Data\CheckStatus_Input\Input_Keys.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,427.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="sd:DataRow" Name="dr_temp_status" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="496,414" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;Input&quot;)]" SaveAfterEachRow="False">
+                      <ueab:ExcelForEachRowX.Body>
+                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                          <ActivityAction.Argument1>
+                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                          </ActivityAction.Argument1>
+                          <ActivityAction.Argument2>
+                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                          </ActivityAction.Argument2>
+                          <Sequence sap:VirtualizedContainerService.HintSize="462,215.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1934" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="Current_URL_ForStatus" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign sap:VirtualizedContainerService.HintSize="434,72" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[Current_URL_ForStatus]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[CurrentRow("URL")]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Organization Details | UiPath Licensing" sap:VirtualizedContainerService.HintSize="434,1700" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="ae3e9100-df64-411c-bf18-a311299f3e3b" Version="V2">
+                                <uix:NApplicationCard.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                    </ActivityAction.Argument>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="400,1472" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="LicenseStatus" />
+                                        <Variable x:TypeArguments="x:String" Name="LicenseCode" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="338,98.66666666666667" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                                      <uix:NGetText DisplayName="Get Text 'License Status'" sap:VirtualizedContainerService.HintSize="338,168" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="ae3e9100-df64-411c-bf18-a311299f3e3b" TextString="[LicenseStatus]" Version="V3">
+                                        <uix:NGetText.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://license.uipath.com/license/2741689" DesignTimeRectangle="1267, 537, 50, 20" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Enabled'" FullSelectorArgument="&lt;webctrl id='license-status' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='license-status' tag='SPAN' type='' class='form-control' /&gt;" Guid="9ca83d64-6fa5-435e-89eb-11c4c2272f90" InformativeScreenshot="213e128449a7ed318fadbbe235bd5d5d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='License Details | UiPath Licensing' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                <uix:Target DesignTimeRectangle="1071, 537, 196, 20" ElementType="Text" FriendlyName="'License Status'" FullSelectorArgument="&lt;webctrl parentid='mat-tab-content-0-0' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='mat-tab-content-0-0' tag='LABEL' type='' class='' aaname='License Status:' check:innerText='License Status:' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NGetText.Target>
+                                      </uix:NGetText>
+                                      <uix:NGetText DisplayName="Get Text 'Cognizant Technology'" sap:VirtualizedContainerService.HintSize="338,168" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="ae3e9100-df64-411c-bf18-a311299f3e3b" TextString="[LicenseCode]" Version="V3">
+                                        <uix:NGetText.Target>
+                                          <uix:TargetAnchorable BrowserURL="https://license.uipath.com/license/2741689" DesignTimeRectangle="312, 203, 1518, 36" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'5907-9012-9436-1036'" FullSelectorArgument="&lt;webctrl id='license-code' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='license-code' tag='DIV' type='' class='' /&gt;" Guid="799268f3-f0bf-4f69-bc06-920aba2e1d97" InformativeScreenshot="5e13fdb5e02631c616fb8f7a8b9c1d3d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='License Details | UiPath Licensing' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                <uix:Target DesignTimeRectangle="320, 152, 346, 29" ElementType="Text" FriendlyName="'Cognizant Technology'" FullSelectorArgument="&lt;webctrl parentid='license-org-name' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='license-org-name' tag='A' type='' class='' aaname='Cognizant Technology Solutions' check:innerText='Cognizant Technology Solutions' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NGetText.Target>
+                                      </uix:NGetText>
+                                      <Assign sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="sd:DataRow">[dr_temp_status]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="sd:DataRow">[dt_temp_status.NewRow]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <Assign sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Object">[dr_temp_status("URL")]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Object">[Current_URL_ForStatus]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <Assign sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Object">[dr_temp_status("LicenseCode")]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Object">["'" + LicenseCode]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <Assign sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Object">[dr_temp_status("Status")]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Object">[LicenseStatus]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,104.66666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Current_URL_ForStatus +&quot; | &quot; + LicenseCode + &quot; | &quot; + LicenseStatus]" />
+                                      <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[dr_temp_status]" DataTable="[dt_temp_status]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="338,200" sap2010:WorkflowViewState.IdRef="AddDataRow_2" />
+                                    </Sequence>
+                                  </ActivityAction>
+                                </uix:NApplicationCard.Body>
+                                <uix:NApplicationCard.TargetApp>
+                                  <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAE3SURBVDhPndO5SgNRGIbhuG+gKCa4IFoKgo2XIATsbYRcRQhWNnZWtuIFiAtq49ZaqdhZpbBRBBEbN0QcJfi+MicgwXFi8TBzzj/zzZmzZKJ87goveK3TM+4NePAGB9hLaR+3iAzw60foRHOsJRbagc+0oRVbqISAw7izPWa/GtABa4NYxwIM30Q1wOF3YxUrCCE9WMMSJnCJDVj3+iOgF2c4QRes9aMM6/bNYAqNqBlBUoATN4JzOMIm1B0wBpfcof8rYBSJAU7iMS7QB2sO+xoumfe/BriMLs0y3lDEJBYRYR4DSAywcxyn8KUnvMNNNgT3wZ8jsD2MAkqYhfNgv/Myh2nULKNfcXNYcPfZn6nks15t+0Vroe22rm5lD9MddrGd0g5u8H2YPFX+6wc+U/JZ3sk9fgHgSd/8cNmxNgAAAABJRU5ErkJggg==" InformativeScreenshot="864996c3095897f8e8bbfa208db6a108.jpg" Selector="&lt;html app='msedge.exe' title='Organization Details | UiPath Licensing' /&gt;" Url="[Current_URL_ForStatus]" />
+                                </uix:NApplicationCard.TargetApp>
+                              </uix:NApplicationCard>
+                            </Sequence>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelForEachRowX.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:ExcelForEachRowX>
+                    <ueab:WriteRangeX Append="True" Destination="[Excel.Sheet(&quot;Output&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,173.33333333333334" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dt_temp_status]">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ueab:WriteRangeX>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>

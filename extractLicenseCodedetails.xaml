@@ -1,0 +1,168 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="extractLicenseCodedetails" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="486,2034.666666666667" sap2010:WorkflowViewState.IdRef="extractLicenseCodedetails_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="66">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="extractLicenseCodedetails" sap:VirtualizedContainerService.HintSize="496,1970" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="LicenseCode" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="434,254.66666666666666" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Enter License code">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[LicenseCode]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Organization Details | UiPath Licensing" sap:VirtualizedContainerService.HintSize="434,1553.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f70fa3fa-b82b-443d-bbed-24e3c6fa6989" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1325.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="Bundle_Name" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="338,168" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f70fa3fa-b82b-443d-bbed-24e3c6fa6989" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://license.uipath.com/organizations/110" DesignTimeRectangle="1430, 109, 15, 8" DesignTimeScaleFactor="1.5" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl class='mat-select-arrow' parentid='search-target' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='mat-select-arrow' parentid='search-target' tag='DIV' type='' aaname='' /&gt;" Guid="3258cda6-ace5-42a5-94e5-00189aca9e2c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAAMCAYAAACA0IaCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABaSURBVDhPY5Asu/SfWngIGNaz++V/cgBIH4Zh5BiIbBAIY3iTWAPRDQJhrGFGyEBsBoEwzgjAZSAug0AYp2EgjG4gPoNAGK9hIAwzkJBBIEzQMFIwFQ279B8AyCF3zZbAXIgAAAAASUVORK5CYII=" InformativeScreenshot="dab52d055cead74f0f87502a10ff2e50.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Organization Details | UiPath Licensing' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'License Code'" sap:VirtualizedContainerService.HintSize="338,168" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f70fa3fa-b82b-443d-bbed-24e3c6fa6989" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://license.uipath.com/organizations/110" DesignTimeRectangle="1181, 81, 270, 63" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'License Code'" FullSelectorArgument="&lt;webctrl parentid='mat-option-0' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='mat-option-0' tag='SPAN' type='' class='mat-option-text' aaname='License Code' check:innerText='License Code' /&gt;" Guid="6e3f6311-0576-4dff-8302-299f178da33e" ImageBase64="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" InformativeScreenshot="b7e8ee13638155bcdc981aa5c93cf74c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Organization Details | UiPath Licensing' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1181, 144, 270, 63" ElementType="Text" FriendlyName="'Organization'" FullSelectorArgument="&lt;webctrl parentid='mat-option-1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='mat-option-1' tag='SPAN' type='' class='mat-option-text' aaname='Organization' check:innerText='Organization' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Search ... *'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,231.33333333333334" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="f70fa3fa-b82b-443d-bbed-24e3c6fa6989" Text="[LicenseCode + &quot;[k(enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://license.uipath.com/organizations/110" DesignTimeRectangle="1481, 101, 270, 24" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT search-text'" FullSelectorArgument="&lt;webctrl id='search-text' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='search-text' tag='INPUT' type='text' class='form-control mat-input-element mat-form-field-autofill-control cdk-text-field-autofill-monitored ng-pristine ng-invalid ng-touched' aaname='Search ... *' /&gt;" Guid="6185e20b-e9e3-4167-a6b1-13bc988afa69" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAcCAYAAACtSjDnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAVOSURBVHhe7ZvPayJJFMf339i/JH9B/gRv3vbmcQ5zyC23eBtkISyBeBlCWBZhWGRYkCXEQAjRQ0YYpCP2qmjSiWhao7SY+J2q6uof1Skdl84kmnkFH0hXvW47je/b7716/vLr+y8gCIKIAwkJQRCxISEhCCI2JCQEQcSGhIQgiNiQkBAEEZvFQpIxkTr8D4m0Zm1N2Po6gTOZoXKqXycIIj5PhSTdxG5tAvsR6hhPUDxuYiNqv+Js1x7E7Rvn+vVV4OCGP98htjVrBLEOqEKS7qA4EH4HTKcwrkYoXAxRuZnCkcJi1zprJSYkJATx41GEJFWZCqdDz0Yqms5kezDE8gylfyJrK8xqCkkTH8672P6jKo4VIUnXsV3oIKHYE8RqowiJ+EIvcLp3VVdonIalWb9E8rCJFOdjfXHUImovS9pymHP9Nsd2Myuvw0hm1DVOVEgCexObEdsXY89GQ9wVe5Z3Dhpj9sdgjOKNe6/ABPk9zXkEsaKoQnLlfo0bF3XFyOdPC7lyH7l/W6H5KlLHI1hPaioOcjn3jeuTbmK/5TlLaEwc5CO2ngA0agNYMlBSwv/sLUpeGhYalnmLpOY6RkVjP2UOG73HF6GKxF/sWdYcWFxEvPH4AOtqyJ5vWyuKBLGqKEKSOHfcL/R0unRhNcnOEWcxpyyVLWx9Yg5iTuXcGLt+ilRnQjXjs3B6I+Esqbm2gQCIMeH1GgeG2UOKr+95aRZgXw2w/7mJnZMBDOmUPGLy7j18HYe99QtcCMs2SnfuveCOpXHS9uWpKvdnGx2NDUGsPmqx9b2J/XbIge+ZOFS72MlehmxCpG/hllXYmz0bXgscxPradOcOWWQhTEf44Ntx6sh1hSmMs2Ded7BuX4kwODumKwJPCr9pC6UJXwlSg7nXSXdREVHU66URG8djIaJ27Zo9d/4/PaCYf40IiSDiERESDk9V2Nv9njtZaNw7KESjFOYIYrRvQ+dLPg1h8zXmwN+LbDxnD9dmdHMuHRTFx+oFYLvKIpzJDKUTeTz3OnXke3yFOe/f0bUX4PeuG1XxdI1HYp4oc6Fd474d4udEIyQBm1n2pqyO0AiJit0IahD+255FLiL1UJApS2Rbc+OA1wbGMHoPwuEFsr6ynJCwtIYvLLldOv86XnH5lYSEkTyykQtFIImzIYpHpmJDEOvAQiEJqCJRCIqelRP3y+8LyaLhO3wVWxcTV1zYcELi4wnVzyYkBPFWCIRkr4N9Xog8nd/DkGBCIIZMZTwnbZSXyOsPbbdGMnWQO1Dtdc5OQkIQ60MgJHOLoSG8XZ2bnjje8I7b3e/v8EhbXiCNrv0/IVlcI0mdjUSUk5dNcyQkBPHjCaU2LbDsRQx9G7zp7674OzH+zgdzxuhuQ7qNfGsc9JKcSdHp2eruid8xu6yQqI1x6q5NIDK5yK5NPCFhqV1W0ziXMTX9HnNsCeINo9ZIQk7tbv3ynos+8rWx230p5llKEdpV8PtIMIPVGrgNaxdDaT9jDiyLh/5WMe/ncFC8sFHkBdlQI5tttP3rLhIAIRiyrmJ3h8jLz/T6SMJC+BxCstuS/S/mdTDvpWoh0ZprSxBvnKfF1kwbuZbq4GI8cqHoY0vTcZk8YsIhyyf+eHxA5VTdLt7I9X1n94Z9xa5ZliezlGkZARBkrlHoyaYyb7DPNMpt5TOfU0h4v4c/7wnJo15IFFuCeOM8FRIfFqJ/lL9LWeb3MAz/dyzzGtgknt2ztIEv+B3Oc7KZ0fxP6Utsano+tLYE8YZZICQEQRDLQUJCEERsSEgIgogNCQlBELEhISEIIiZf8A2UC9UM5IT1CwAAAABJRU5ErkJggg==" InformativeScreenshot="c9fc60fee7e1472219cb915384f0fcf7.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Organization Details | UiPath Licensing' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1479, 99, 274, 28" ElementType="Text" FriendlyName="'Search ... *'" FullSelectorArgument="&lt;webctrl id='mat-form-field-label-1' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl id='mat-form-field-label-1' tag='LABEL' type='' class='mat-form-field-label ng-tns-c18-7 ng-star-inserted mat-empty mat-form-field-empty' aaname='' check:innerText='Search ... *' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARIAAAAcCAYAAACtSjDnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAVOSURBVHhe7ZvPayJJFMf339i/JH9B/gRv3vbmcQ5zyC23eBtkISyBeBlCWBZhWGRYkCXEQAjRQ0YYpCP2qmjSiWhao7SY+J2q6uof1Skdl84kmnkFH0hXvW47je/b7716/vLr+y8gCIKIAwkJQRCxISEhCCI2JCQEQcSGhIQgiNiQkBAEEZvFQpIxkTr8D4m0Zm1N2Po6gTOZoXKqXycIIj5PhSTdxG5tAvsR6hhPUDxuYiNqv+Js1x7E7Rvn+vVV4OCGP98htjVrBLEOqEKS7qA4EH4HTKcwrkYoXAxRuZnCkcJi1zprJSYkJATx41GEJFWZCqdDz0Yqms5kezDE8gylfyJrK8xqCkkTH8672P6jKo4VIUnXsV3oIKHYE8RqowiJ+EIvcLp3VVdonIalWb9E8rCJFOdjfXHUImovS9pymHP9Nsd2Myuvw0hm1DVOVEgCexObEdsXY89GQ9wVe5Z3Dhpj9sdgjOKNe6/ABPk9zXkEsaKoQnLlfo0bF3XFyOdPC7lyH7l/W6H5KlLHI1hPaioOcjn3jeuTbmK/5TlLaEwc5CO2ngA0agNYMlBSwv/sLUpeGhYalnmLpOY6RkVjP2UOG73HF6GKxF/sWdYcWFxEvPH4AOtqyJ5vWyuKBLGqKEKSOHfcL/R0unRhNcnOEWcxpyyVLWx9Yg5iTuXcGLt+ilRnQjXjs3B6I+Esqbm2gQCIMeH1GgeG2UOKr+95aRZgXw2w/7mJnZMBDOmUPGLy7j18HYe99QtcCMs2SnfuveCOpXHS9uWpKvdnGx2NDUGsPmqx9b2J/XbIge+ZOFS72MlehmxCpG/hllXYmz0bXgscxPradOcOWWQhTEf44Ntx6sh1hSmMs2Ded7BuX4kwODumKwJPCr9pC6UJXwlSg7nXSXdREVHU66URG8djIaJ27Zo9d/4/PaCYf40IiSDiERESDk9V2Nv9njtZaNw7KESjFOYIYrRvQ+dLPg1h8zXmwN+LbDxnD9dmdHMuHRTFx+oFYLvKIpzJDKUTeTz3OnXke3yFOe/f0bUX4PeuG1XxdI1HYp4oc6Fd474d4udEIyQBm1n2pqyO0AiJit0IahD+255FLiL1UJApS2Rbc+OA1wbGMHoPwuEFsr6ynJCwtIYvLLldOv86XnH5lYSEkTyykQtFIImzIYpHpmJDEOvAQiEJqCJRCIqelRP3y+8LyaLhO3wVWxcTV1zYcELi4wnVzyYkBPFWCIRkr4N9Xog8nd/DkGBCIIZMZTwnbZSXyOsPbbdGMnWQO1Dtdc5OQkIQ60MgJHOLoSG8XZ2bnjje8I7b3e/v8EhbXiCNrv0/IVlcI0mdjUSUk5dNcyQkBPHjCaU2LbDsRQx9G7zp7674OzH+zgdzxuhuQ7qNfGsc9JKcSdHp2eruid8xu6yQqI1x6q5NIDK5yK5NPCFhqV1W0ziXMTX9HnNsCeINo9ZIQk7tbv3ynos+8rWx230p5llKEdpV8PtIMIPVGrgNaxdDaT9jDiyLh/5WMe/ncFC8sFHkBdlQI5tttP3rLhIAIRiyrmJ3h8jLz/T6SMJC+BxCstuS/S/mdTDvpWoh0ZprSxBvnKfF1kwbuZbq4GI8cqHoY0vTcZk8YsIhyyf+eHxA5VTdLt7I9X1n94Z9xa5ZliezlGkZARBkrlHoyaYyb7DPNMpt5TOfU0h4v4c/7wnJo15IFFuCeOM8FRIfFqJ/lL9LWeb3MAz/dyzzGtgknt2ztIEv+B3Oc7KZ0fxP6Utsano+tLYE8YZZICQEQRDLQUJCEERsSEgIgogNCQlBELEhISEIIiZf8A2UC9UM5IT1CwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="338,98.66666666666667" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NClick ClickType="Single" DisplayName="Click 'info'" sap:VirtualizedContainerService.HintSize="338,168" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f70fa3fa-b82b-443d-bbed-24e3c6fa6989" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://license.uipath.com/search?type=licenseCode&amp;text=0123-9421-5657-8072" DesignTimeRectangle="1820, 280, 36, 36" DesignTimeScaleFactor="1.5" ElementType="Icon" FriendlyName="'info'" FullSelectorArgument="&lt;webctrl aaname='License Code Enabled Bundle Subscription License Model Activatio*' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='MAT-ICON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='License Code Enabled Bundle Subscription License Model Activatio*' tag='TABLE' /&gt;&lt;webctrl type='' tag='MAT-ICON' class='mat-icon notranslate material-icons mat-icon-no-color' aaname='info' check:innerText='info' /&gt;" Guid="72f16135-e4cb-4fa3-b127-02a01148a021" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHoSURBVFhH7Zg/a8JAGIf7NfwUfgo3Vzc3t44dOoggDkLHTHXrIFIcJFu2bK5CoYdS/9AqRVFaFBEhovJrTM822jdNLqdyLT7wG+99H0zu9XIXUJyzoCxnQVn+seDawqj1Cl1v4irPEE8/InLNk2ZI5BvIlZ9htMaw1nxNCMQFlxNU9Sck3UJ+SdeR1vsYLXkNAQQEV5g2OkiJiO3HFr1rzHi9YAQUnINV6ohSTUMkWRnC4pX9CCA4R63EyEYyiZcGgSR9BFfomY2D/XL7uTTHvI83vwparI04UfhwYdDYnHej8RZcDKDlqKJ0EsUuqg99J0ZR4JXItlFb8J4EnoI9o04X9EjKnPCVwMgUW5s03vnKn9CC6yEKWbqYV2QEI9kOmMcwpwXtd090Y8S0JgrltpMbTXzXa2zFm+9CCrLK4ceKX2KVEe++CyE4g3lLFzlqtC4oRULwDfd5ooBPZB+x8x5yAzeEoD1eqAI+kdokTuxxw9e7+YuC4R6xtGDwRxxuk0gLBt8k4caMrKDAmLEJMahlBYUGtfp/dTZqHxY2qH7c2qD2gdVB8SP/J0p/NG1R+rNzi9If7i6WE9SMpvDVR84YHPvqY4+1hWmv/3V5lMh8C0Uz/PJIf0G1Nz3x5dGJOQvKorgg8AGWy7r6cItsOwAAAABJRU5ErkJggg==" InformativeScreenshot="805fc75c189abfd66c92317fdadaf40e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Organization Details | UiPath Licensing' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1820, 202, 36, 36" ElementType="Icon" FriendlyName="'archive'" FullSelectorArgument="&lt;webctrl aaname='License Code Enabled Bundle Subscription License Model Activatio*' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='MAT-ICON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='License Code Enabled Bundle Subscription License Model Activatio*' tag='TABLE' /&gt;&lt;webctrl type='' tag='MAT-ICON' class='mat-icon notranslate material-icons mat-icon-no-color' aaname='archive' check:innerText='archive' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAF2SURBVFhH7ZixSsNAHId9jT5FR5/AzdWtm5sPIH2Drtm6OZWSyUXcbnMNBAyRYkollQSytCgECmn5mb+5xSaXS3q5WvQ++JaQ/u9Leh2uZzhxTKAqJlAVE6hKs8BsDc9dYmoHGCu7wKObIMn4bAnywN0K99Yzerfd2rfeEO74GjVIAlM4E+974A1b8WuqpHh9eEE/n3k5ibHhV0XUBG4RsmJQbxSAuRGeOnMJa1S8SdmDiwOjBQYUp10f04ivWYEwMGF+xTA9XrM1X7WMCWyiCVT1vwcGcPhnfhLDqry/rAk8ncChj/Es5Xe0ZzObYzDcm5nb7Rs8MFIUR3b/FbeMrIsj9ezBhpGyOFLfj0QS2SSO1BdICiKbxpF6A8m9yDZxpP5Akke2jSOPE0jmYect48jjBR7o3wxEvpcuKoZ1r5fv3S1ftIw4kM7EtlccOzV6ZdefjWsCiQwfYQzG5hV/Yah5x97hhJ98HTGSwN/HBKpiAtUAvgCNLzXxU7bbAgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text 'UiPath Platform / Server'" sap:VirtualizedContainerService.HintSize="338,168" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="f70fa3fa-b82b-443d-bbed-24e3c6fa6989" TextString="[Bundle_Name]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://license.uipath.com/license/4429963" DesignTimeRectangle="574, 416, 227, 25" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'UiPath Platform / Server'" FullSelectorArgument="&lt;webctrl id='bundle-name' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='bundle-name' tag='SPAN' type='' class='top-eight' /&gt;" Guid="3bf4957e-3182-44b9-bb9b-b0f92f99e3eb" InformativeScreenshot="014f2af5a682bd6431eb95077cb0c28d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='License Details | UiPath Licensing' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAE3SURBVDhPndO5SgNRGIbhuG+gKCa4IFoKgo2XIATsbYRcRQhWNnZWtuIFiAtq49ZaqdhZpbBRBBEbN0QcJfi+MicgwXFi8TBzzj/zzZmzZKJ87goveK3TM+4NePAGB9hLaR+3iAzw60foRHOsJRbagc+0oRVbqISAw7izPWa/GtABa4NYxwIM30Q1wOF3YxUrCCE9WMMSJnCJDVj3+iOgF2c4QRes9aMM6/bNYAqNqBlBUoATN4JzOMIm1B0wBpfcof8rYBSJAU7iMS7QB2sO+xoumfe/BriMLs0y3lDEJBYRYR4DSAywcxyn8KUnvMNNNgT3wZ8jsD2MAkqYhfNgv/Myh2nULKNfcXNYcPfZn6nks15t+0Vroe22rm5lD9MddrGd0g5u8H2YPFX+6wc+U/JZ3sk9fgHgSd/8cNmxNgAAAABJRU5ErkJggg==" InformativeScreenshot="ce16edbee24c1c15f1c41ed54f811bd5.jpg" Selector="&lt;html app='msedge.exe' title='Organization Details | UiPath Licensing' /&gt;" Url="https://license.uipath.com/organizations/110" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
